@@ -1,0 +1,1 @@
+// TODO: create all dependencies for required packages (mysql2, sequelize, express, brcypt)
