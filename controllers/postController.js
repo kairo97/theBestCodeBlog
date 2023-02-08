@@ -26,3 +26,46 @@ router.get("/:id", (req,res)=>{
         res.status(500).json({msg:"OH NO", err})
     })
 })
+router.post('/', (req,res)=>{
+    if(!req.session.userId){
+        return res.status(403).json({msg:"login first"})
+    }
+    console.log(req.body);
+    Post.create({
+        post:req.body.post,
+        userId:req.session.userId
+    }).then(postData=>{
+        res.json(postData)
+    }).catch(err=>{
+        console.log(err);
+        res.status(500).json({msg:'OH NO', err})
+    })
+})
+router.delete("/:id",(req,res)=>{
+    if(!req.session.userId){
+       return res.status(403).json({msg:"login first post"})
+    }
+    console.log(req.body);
+    Post.findByPk(req.params.id).then(postData=>{
+       if(!postData){
+          return res.status(404).json({msg:"no such post"})
+       } else if(postData.UserId!== req.session.userId){
+          return res.status(403).json({msg:"not your post!"})
+       }
+       Post.destroy({
+        where:{
+           id:req.params.id,
+        }
+       }).then(postData=>{
+         res.json(postData)
+        }).catch(err=>{
+         console.log(err);
+         res.status(500).json({msg:"oh no!",err})
+        })
+    }).catch(err=>{
+         console.log(err);
+         res.status(500).json({msg:"oh no!",err})
+    })
+ })
+ 
+ module.exports = router;
