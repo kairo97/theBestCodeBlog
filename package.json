@@ -1,0 +1,24 @@
+{
+  "name": "thebestcodeblog",
+  "version": "1.0.0",
+  "description": "a cms style coding blog application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kairo97/theBestCodeBlog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kairo97/theBestCodeBlog/issues"
+  },
+  "homepage": "https://github.com/kairo97/theBestCodeBlog#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.1.1"
+  }
+}
