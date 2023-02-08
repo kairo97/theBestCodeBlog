@@ -1,6 +1,4 @@
-// create all dependencies for required packages (mysql2, sequelize, express, brcypt)
-// TODO:establish routes
-// TODO: link to localhost for server usage
+
 
 // establishing dependencies
 const express = require('express');
@@ -34,11 +32,11 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 // Static directory
-// app.use(express.statis("public"));
+app.use(express.statis("public"));
 
-// const hbs = exphbs.create({});
-// app.engine('handlebars', hbs.engine);
-// app.set('view engine', 'handlebars');
+const hbs = exphbs.create({});
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 app.use(allRoutes);
 app.get('/', (req, res) =>{
