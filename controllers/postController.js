@@ -1,13 +1,8 @@
-//  TODO: import in all required packages
-//  TODO: create get route for getting all posts
-//  TODO: create post request for creating a new user's post
-//  TODO: create put request for user editing their post
-//  TODO: create delete request for removing a post
-//  TODO: export file out as router
+// importing requirements for file
 const express = require('express');
 const router = express.Router();
 const {User, Post} = require('../models');
-
+// get all route
 router.get('/', (req,res)=>{
     Post.findAll().then(postData=>{
         res.json(postData)
@@ -16,6 +11,7 @@ router.get('/', (req,res)=>{
         res.status(500).json({msg:'OH NO', err})
     })
 })
+// get by id route
 router.get("/:id", (req,res)=>{
     Post.findByPk(req.params.id,{
         include:[User]
@@ -26,7 +22,9 @@ router.get("/:id", (req,res)=>{
         res.status(500).json({msg:"OH NO", err})
     })
 })
+// create post route
 router.post('/', (req,res)=>{
+    // adding security so you must be logged in to post
     if(!req.session.userId){
         return res.status(403).json({msg:"login first"})
     }
@@ -41,6 +39,7 @@ router.post('/', (req,res)=>{
         res.status(500).json({msg:'OH NO', err})
     })
 })
+// create a delete route with security to confirm that user is who created post
 router.delete("/:id",(req,res)=>{
     if(!req.session.userId){
        return res.status(403).json({msg:"login first post"})
