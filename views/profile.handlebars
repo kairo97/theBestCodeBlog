@@ -1,0 +1,14 @@
+<h1>Welcome back, {{email}}!</h1>
+<h2>Write a new post</h2>
+<form id="new-post-form">
+    <textarea id="post-input"></textarea>
+    <button>Post!</button>
+</form>
+<h2>my chirps</h2>
+{{#each Posts}}
+    <section class="psot-box">
+    <p>  text: {{post}}</p>
+</section>
+{{/each}}
+
+<script src="/js/profile.js"></script>

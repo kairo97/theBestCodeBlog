@@ -4,8 +4,10 @@
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const sequelize = require('');
-const sequelizeStore = require('connect-session-sequelize');
+const allRoutes = require('./controllers')
+
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // setting up the express app
 
@@ -21,7 +23,7 @@ const sess = {
     },
     resave: false,
     saveUninitialized: true,
-    store: new sequelizeStore({
+    store: new SequelizeStore({
         db: sequelize
     })
 };
@@ -32,7 +34,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 // Static directory
-app.use(express.statis("public"));
+app.use(express.static("public"));
 
 const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
@@ -42,9 +44,11 @@ app.use(allRoutes);
 app.get('/', (req, res) =>{
     res.send('hello and welcome')
 })
-app.arguments('/sessions', (req, res) =>{
+app.get('/favecolor/:color',(req,res)=>{
+    req.session.favColor = req.params.color
     res.json(req.session)
 })
+
 app.get('/secretclub', (req, res)=>{
     req.session.favColor = req.params.color
     res.json(req.session)
