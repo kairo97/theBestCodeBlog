@@ -2,8 +2,14 @@
 <h2>All posts</h2>
 
 {{#each allPosts}}
-<section class="post-box">
+<section class="post-box" id="post-box">
     <h2>{{User.email}} Posted</h2>
     <p> text: {{post}}</p>
 </section>
 {{/each}}
+<form action="" id="post-form">
+  <h2 id="post-title">New Post</h2>
+  <input type="text" placeholder="new post title" id="new-title" required>
+  <input type="text" placeholder="new post" id="new-post" required>
+  <button id="post-button" type="submit"> post </button>
+</form>
