@@ -5,6 +5,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const allRoutes = require('./controllers')
+const frontEndRoutes = require('./controllers/frontEndController')
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -40,26 +41,14 @@ const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-app.use(allRoutes);
-app.get('/', (req, res) =>{
-    res.send('hello and welcome')
-})
-app.get('/favecolor/:color',(req,res)=>{
-    req.session.favColor = req.params.color
+app.use('/',allRoutes);
+app.get('/sessions', (req,res)=>{
     res.json(req.session)
 })
 
-app.get('/secretclub', (req, res)=>{
-    req.session.favColor = req.params.color
-    res.json(req.session)
-})
-app.get('/secretclub',(req,res)=>{
-    if(req.session.userId){
-        return res.send(`welcome to the secret club, ${req.session.userEmail}`)
-    } else {
-        res.status(403).json({msg:'login first ot join the club'})
-    }
-})
+
+
+
 sequelize.sync({ force:false}).then(function() {
     app.listen(PORT, function() {
         console.log('App listening on PORT' + PORT);

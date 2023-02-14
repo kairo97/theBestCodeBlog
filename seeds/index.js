@@ -21,13 +21,13 @@ const seed = async ()=>{
     const posts = await Post.bulkCreate([
         {
             post:"dude, suh?",
-            userId:1
+            UserId:1
         },{
             post:"why does everyone think that I'm a bear?",
-            userId:2
+            UserId:2
         },{
             post:"hello fellow humans, what a nice day to leave your chicken coop open am I right?",
-            userId:3
+            UserId:3
         }
     ])
     process.exit(1)
