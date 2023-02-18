@@ -7,8 +7,8 @@ router.get('/', (req,res)=>{
     Post.findAll({
         include: {
             model: User,
-            as:'author',
-            attributes: ['email']
+            as:'User',
+            attributes: ['id','email']
         }
     }).then(postData=>{
         res.json(postData)
@@ -22,8 +22,8 @@ router.get("/:id", (req,res)=>{
     Post.findByPk(req.params.id,{
         include:{
             model:User,
-            as:'author',
-            attributes: ['email']
+            as:'User',
+            attributes: ['id','email']
         }
     }).then(postData=>{
         res.json(postData)

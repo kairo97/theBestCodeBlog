@@ -1,12 +1,12 @@
 document.querySelector("#new-post-form").addEventListener("submit",e=>{
     e.preventDefault();
-    const chripObj = {
-        chirp:document.querySelector("#post-input").value
+    const postObj = {
+        post:document.querySelector("#post-input").value
     }
-    console.log(chripObj)
+    console.log(postObj)
     fetch("/api/posts",{
         method:"POST",
-        body:JSON.stringify(chripObj),
+        body:JSON.stringify(postObj),
         headers:{
             "Content-Type":"application/json"
         }

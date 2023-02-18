@@ -2,11 +2,11 @@ const User = require("./User");
 const Post = require("./Post");
 
 Post.belongsTo(User,{
-    as: "author",
+    as: "User",
     onDelete:"CASCADE",
 })
 User.hasMany(Post, {
-    as: "author",
+    as: "User",
 })
 
 module.exports = {

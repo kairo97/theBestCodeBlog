@@ -8,7 +8,8 @@ router.get('/', (req,res)=>{
         include:[
             {
                 model:User,
-                as:'author'
+                as:'User',
+                attributes:['id','email']
             }
         ]
     }).then(postData=>{
@@ -36,7 +37,7 @@ router.get("/profile", (req, res) => {
       include: [
         {
           model: Post,
-          as: "author",
+          as: "User",
         },
       ],
     })
@@ -52,7 +53,7 @@ router.get("/profile", (req, res) => {
           include: [
             {
               model: User,
-              as: "author",
+              as: "User",
             },
           ],
         }).then((postData) => {
@@ -62,12 +63,12 @@ router.get("/profile", (req, res) => {
             isLoggedIn: req.session.isLoggedIn,
             userId: req.session.userId,
             allPosts: hbsPost,
+            userData:hbsData
           });
         });
       })
       .catch((err) => {
         console.error(err);
-        res.redirect("/sessions");
       });
   });
   
