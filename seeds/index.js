@@ -20,12 +20,15 @@ const seed = async ()=>{
 
     const posts = await Post.bulkCreate([
         {
+            title: "dude",
             post:"dude, suh?",
             UserId:1
         },{
+            title:"not a bear",
             post:"why does everyone think that I'm a bear?",
             UserId:2
         },{
+            title:"I am a human",
             post:"hello fellow humans, what a nice day to leave your chicken coop open am I right?",
             UserId:3
         }

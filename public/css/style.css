@@ -28,24 +28,112 @@ footer {
     text-align: center;
     bottom:0;
 }
-#homepage #allposts{
+#homepage{
     text-align: center;
     border-bottom: black solid 2px;
+}
+#allposts{
+    text-align: center;
 }
 #nav-bar{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+#nav-bar a {
+    color:aliceblue;
+    margin:10px;
+}
 #post-box{
     margin:15px;
     text-align: center;
-    border: solid black 2px;
+    background-color: slateblue;
     border-radius: 5px;
+    color:aliceblue;
 }
+
 #post-form{
-    border: solid black 2px;
     border-radius: 5px;
     text-align: center;
     margin: 15px;
+    background-color: slateblue;
+    color:aliceblue;
 }
+#login{
+    display: flex;
+    margin:0 auto;
+    width: fit-content;
+    background-color: slateblue;
+    color:aliceblue;
+    font-size: x-large;
+    margin-top: 25px;
+    border:solid black 2px;
+    border-radius: 5px;
+    padding:5px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#login-form{
+    width: fit-content;
+    margin:0 auto;
+    background-color: slateblue;
+    color:aliceblue;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top:50px;
+
+}
+#email-login{
+    margin:5px;
+}
+#password-login{
+    margin-left:13px;
+}
+#login-btn{
+    margin-top:5px;
+    margin-left:110px;
+    padding:3px;
+    background-color:cornflowerblue ;
+    border-radius: 5px;
+
+}
+#profile-h1{
+    text-align: center
+}
+#profile-h2{
+    margin-top: 50px;
+    text-align: center;
+}
+#new-post-form{
+    display:flex;
+    flex-direction: column;
+    width: 22vw;
+    padding:15px;
+    margin:0 auto;
+    background-color: slateblue;
+    border-radius: 5px;
+}
+#new-post-input{
+    margin:2px;
+}
+#new-title-input{
+    margin:2px;
+}
+#new-post-btn{
+    width:fit-content;
+    margin:0 auto;
+}
+#my-posts{
+    background-color: slateblue;
+    color:aliceblue;
+    width: 22vw;
+    text-align: center;
+    margin:0 auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding:5px;
+}
+#my-post-box{
+ back
+}
+

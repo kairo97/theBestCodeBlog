@@ -1,12 +1,14 @@
-<h1>Welcome back, {{email}}!</h1>
-<h2>Write a new post</h2>
+<h1 id="profile-h1">Welcome back, {{email}}!</h1>
+<h2 id="profile-h2">Write a new post</h2>
 <form id="new-post-form">
-    <textarea id="post-input"></textarea>
-    <button>Post!</button>
+    <input type="text" placeholder="title" id="new-title-input">
+        <input type="text" placeholder="post" id="new-post-input">
+    <button id="new-post-btn">Post!</button>
 </form>
-<h2>my posts</h2>
-{{#each Posts}}
-    <section class="post-box">
+<h2 id="my-posts">my posts</h2>
+{{#each allPosts}}
+    <section class="post-box" id="my-post-box">
+    <h3> {{title}}</h3>
     <p>  text: {{post}}</p>
 </section>
 {{/each}}
