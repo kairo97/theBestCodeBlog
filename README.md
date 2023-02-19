@@ -31,5 +31,5 @@
         
 
         
-     <img width="1280" alt="Screenshot_20230219_122847" src="https://user-images.githubusercontent.com/109006341/219973598-12bcafb3-6c70-4c92-a712-0ad2c83bfece.png">
+       ![scrrenshot](https://user-images.githubusercontent.com/109006341/219973598-12bcafb3-6c70-4c92-a712-0ad2c83bfece.png)
 
