@@ -13,10 +13,16 @@ router.get("/",(req,res)=>{
    })
 })
 // logout route
-router.get("/logout",(req,res)=>{
-    req.session.destroy();
-    res.send("logged out")
-})
+router.post("/logout", (req, res) => {
+    req.session.destroy((err) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).send("An error occurred while logging out.");
+      }
+      res.clearCookie("sid");
+      res.status(200).send("Logout successful.");
+    });
+  });
 
 // find user by ID
 router.get("/:id",(req,res)=>{

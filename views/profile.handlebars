@@ -1,5 +1,6 @@
 <h1 id="profile-h1">Welcome back {{User.email}}!</h1>
 <h2 id="profile-h2">Write a new post</h2>
+<button id="logout">Log Out</button>
 <form id="new-post-form">
     <input type="text" placeholder="title" id="new-title-input">
         <input type="text" placeholder="post" id="new-post-input">
@@ -12,5 +13,5 @@
     <p>  text: {{post}}</p>
 </section>
 {{/each}}
-
+<script src="/js/logout.js"></script>
 <script src="/js/profile.js"></script>
