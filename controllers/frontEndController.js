@@ -37,7 +37,7 @@ router.get("/profile", (req, res) => {
       include: [
         {
           model: Post,
-          as: "User",
+          as: "Post",
         },
       ],
     })

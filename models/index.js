@@ -6,7 +6,7 @@ Post.belongsTo(User,{
     onDelete:"CASCADE",
 })
 User.hasMany(Post, {
-    as: "User",
+    as: "Post",
 })
 
 module.exports = {

@@ -40,6 +40,7 @@ router.post('/', (req,res)=>{
     }
     console.log(req.body);
     Post.create({
+        title:req.body.title,
         post:req.body.post,
         userId:req.session.userId
     }).then(postData=>{

@@ -67,7 +67,24 @@ router.post("/login",(req,res)=>{
     res.status(500).json({msg:"OH NO",err})
    })
 })
-
+router.post('/signup', (req,res)=>{
+    console.log(req.body);
+    User.create({
+        email:req.body.email,
+        name:req.body.name,
+        password: req.body.password,
+    })
+    .then((userData)=>{
+        req.session.userId = userData.id;
+        req.session.userEmail = userData.email;
+        req.session.username = userData.name;
+        res.json(userData);
+    })
+    .catch((err)=>{
+        console.log(err);
+        res.status(500).json({msg:'oops, sorry', err});
+    });
+})
 
 
 

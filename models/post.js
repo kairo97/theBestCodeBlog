@@ -16,6 +16,14 @@ Post.init({
             len:[1,1000]
         }
     },
+    userId: {
+        type:DataTypes.INTEGER,
+        allowNull:false,
+        references:{
+            model: "User",
+            key: "id"
+        }
+    }
 },{
     sequelize
 });
