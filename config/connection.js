@@ -18,9 +18,10 @@ if (process.env.JAWSDB_URL) {
     );
 }
 
-module.exports = {
-    HOST: 'us-cdbr-east-06.cleardb.net',
-    USER: 'be973830a8c5b2',
-    PASSWORD: 'bf3e011b',
-    DB: 'heroku_bc4d0fb90112654'
-};
+module.exports = sequelize
+//  {
+//     HOST: 'us-cdbr-east-06.cleardb.net',
+//     USER: 'be973830a8c5b2',
+//     PASSWORD: 'bf3e011b',
+//     DB: 'heroku_bc4d0fb90112654'
+// };
