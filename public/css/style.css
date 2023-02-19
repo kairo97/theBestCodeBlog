@@ -135,5 +135,34 @@ footer {
 }
 #my-post-box{
  background-color: slateblue;
+ width:22vw;
+ color:aliceblue;
+ text-align: center;
+ margin:0 auto;
+ margin-top: 20px;
+ border-radius: 5px;
+ padding:5px;
+}
+#signupTitle{
+    background-color: slateblue;
+    color:aliceblue;
+    width:22vw;
+    text-align: center;
+    margin:0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding:5px;
+}
+#signupForm{
+    background-color: slateblue;
+    height: 80px;
+    width:22vw;
+    color:aliceblue;
+    text-align: center;
+    margin:0 auto;
+    border-radius: 5px;
+    padding: 5px;
+
 }
 
