@@ -2,11 +2,9 @@
 # theBestCodeBlog
 ## Description
         this project is a blog site for coding and programmers, it is built on mysql, sequelize, and nodejs
-        n/a
 ## Table of contents
  *installion
  *usage
- *credits
  *liscense
  *features        
         
@@ -16,21 +14,21 @@
 ## Usage
         create an account, write posts, enjoy yourself
         
-## Credits
-        N/A
         
 ## License
         MIT license
         
-## badges
-        undefined
+
         
 ## Features
         node js, sequelize, mysql, bcrypt for password hashing, express and express-session, and dotenv for storing sensative information
-## How to contribute
-        undefined
-        
-## Tests
-        undefined
         
         
+## Deployed link
+        https://thebestcodeblog.herokuapp.com/
+        
+## Screenshot for site
+        
+
+        
+        <img width="1273" alt="Screenshot_20230219_122521" src="https://user-images.githubusercontent.com/109006341/219973473-6b0ea56a-a768-41f6-ab28-4bf67b99a281.png">
