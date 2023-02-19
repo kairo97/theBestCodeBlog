@@ -30,6 +30,8 @@
 ## Screenshot for site
         
 
-        
-       ![scrrenshot](https://user-images.githubusercontent.com/109006341/219973598-12bcafb3-6c70-4c92-a712-0ad2c83bfece.png)
+ 
 
+       
+
+<img width="1280" alt="Screenshot_20230219_122847" src="https://user-images.githubusercontent.com/109006341/219973710-85c31bcd-7590-40df-a1a5-4119f1b37261.png">
